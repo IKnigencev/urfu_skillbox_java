@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:application.yml"/>
+    <context:component-scan base-package="com.example.task1"/>
+
+    <bean id="petBean"
+          class="com.example.task1.Dog1">
+    </bean>
+
+    <bean id="personBean"
+          class="com.example.task1.Person1">
+        <property name="pet" ref="petBean"/>
+        <property name="surname" value="Knigencev"/>
+        <property name="age" value="20"/>
+    </bean>
+</beans>
