@@ -11,6 +11,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mod1" target="21" />
+      <module name="simple_mvc" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
